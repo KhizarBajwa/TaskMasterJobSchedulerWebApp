@@ -1,0 +1,32 @@
+								A class diagram shows the structure of the system by depicting the system’s classes, their attributes, methods, and relationships.
+
+                                                                    +-------------------+
+                                                                    |      JobRun       |
+                                                                    +-------------------+
+                                                                    | - JobRunId        |
+                                                                    | - StartDate       |
+                                                                    | - EndDate         |
+                                                                    | - StatusId        |
+                                                                    | - Server          |
+                                                                    | - ApplicationId   |
+                                                                    +-------------------+
+                                                                    | + Add()           |
+                                                                    | + GetById()       |
+                                                                    | + GetAll()        |
+                                                                    | + Update()        |
+                                                                    | + Delete()        |
+                                                                    +-------------------+
+                                                                              ^
+                                                                              |
+                                                                              |
+                                                                    +-------------------+
+                                                                    |  JobRunRepository |
+                                                                    +-------------------+
+                                                                    | - context         |
+                                                                    +-------------------+
+                                                                    | + Add()           |
+                                                                    | + GetById()       |
+                                                                    | + GetAll()        |
+                                                                    | + Update()        |
+                                                                    | + Delete()        |
+                                                                    +-------------------+

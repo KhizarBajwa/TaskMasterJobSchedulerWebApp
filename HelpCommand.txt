@@ -1,0 +1,16 @@
+
+How to Add migration
+
+Dir	=>	C:\Users\xxxx\source\repos\TaskMasterJobSchedulerWebApp>
+dotnet ef migrations add Initial -s Presentation/Presentation.csproj -p Infrastructure/Infrastructure.csproj
+dotnet ef database update -s Presentation/Presentation.csproj -p Infrastructure/Infrastructure.csproj
+
+
+
+JobName				TimesheetReminderJob
+JobGroup			TimesheetGroup / Notification-Jobs
+TriggerName			TimesheetReminderTrigger
+TriggerType			Cron
+CronExpression		0 0 9 ? * MON *
+IsActive			1
+CreatedAt			GETDATE()

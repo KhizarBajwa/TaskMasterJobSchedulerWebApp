@@ -1,0 +1,17 @@
+								A use case diagram helps visualize the interactions between users (actors) and the system.
+
+                                                    +-------------------+        +-------------------+
+                                                    |      User         |        |      Admin        |
+                                                    +-------------------+        +-------------------+
+                                                              |                          |
+                                                              |                          |
+                                                              v                          v
+                                                    +-------------------+        +-------------------+
+                                                    |  Create Job       |        |  Manage Jobs      |
+                                                    +-------------------+        +-------------------+
+                                                              |                          |
+                                                              |                          |
+                                                              v                          v
+                                                    +-------------------+        +-------------------+
+                                                    |  View Job Status  |        |  Generate Reports |
+                                                    +-------------------+        +-------------------+

@@ -1,0 +1,112 @@
+﻿@using Core.Entities.TimesheetReminder
+@model IEnumerable<ExecutionLog>
+@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<h2>Dashboard</h2>
+
+<div class="dashboard">
+    <div class="card">
+        <div class="card-title">Today</div>
+        <div class="card-body">
+            Executed: 0 Jobs
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-title">Yesterday</div>
+        <div class="card-body">
+            Executed: 0 Jobs
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-title">Last 24 days</div>
+        <div class="card-body">
+            Executed: @Model.Count() Jobs
+            <br />
+            Success: @Model.Count(m => m.IsSuccess) Failed: @Model.Count(m => !m.IsSuccess)
+        </div>
+    </div>
+</div>
+
+<h3>Job Schedules</h3>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Job Name</th>
+            <th>Job Group</th>
+            <th>Trigger Name</th>
+            <th>Trigger Type</th>
+            <th>Cron Expression</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var job in ViewBag.JobSchedules)
+        {
+            <tr>
+                <td>@job.JobName</td>
+                <td>@job.JobGroup</td>
+                <td>@job.TriggerName</td>
+                <td>@job.TriggerType</td>
+                <td>@job.CronTriggerExpression</td>
+                <td class="actions">
+                    <a asp-action="PauseJob" asp-route-jobName="@job.JobName" asp-route-jobGroup="@job.JobGroup" class="btn btn-warning">Pause</a>
+                    <a asp-action="ResumeJob" asp-route-jobName="@job.JobName" asp-route-jobGroup="@job.JobGroup" class="btn btn-success">Resume</a>
+                    @* <a asp-action="CloneJob" asp-route-jobName="@job.JobName" asp-route-jobGroup="@job.JobGroup" class="btn btn-info">Clone</a> *@
+                    <a asp-action="RunJob" asp-route-jobName="@job.JobName" asp-route-jobGroup="@job.JobGroup" class="btn btn-primary">Run Now</a>
+                    @* <a asp-action="DeleteJob" asp-route-jobName="@job.JobName" asp-route-jobGroup="@job.JobGroup" class="btn btn-danger">Delete</a> *@
+                    <a asp-action="StopJob" asp-route-jobName="@job.JobName" asp-route-jobGroup="@job.JobGroup" class="btn btn-secondary">Stop</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<h3>Currently Executing Jobs</h3>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Job Name</th>
+            <th>Job Group</th>
+            <th>Trigger Name</th>
+            <th>Fire Time</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var execJob in ViewBag.CurrentlyExecutingJobs)
+        {
+            <tr>
+                <td>@execJob.JobDetail.Key.Name</td>
+                <td>@execJob.JobDetail.Key.Group</td>
+                <td>@execJob.Trigger.Key.Name</td>
+                <td>@execJob.FireTimeUtc</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<h3>Execution Logs</h3>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Run Time</th>
+            <th>Job Name</th>
+            <th>Job Group</th>
+            <th>Trigger</th>
+            <th>Message</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var log in Model)
+        {
+            <tr>
+                <td>@log.FireTimeUtc</td>
+                <td>@log.JobName</td>
+                <td>@log.JobGroup</td>
+                <td>@log.TriggerName</td>
+                <td>@log.ErrorMessage</td>
+            </tr>
+        }
+    </tbody>
+</table>

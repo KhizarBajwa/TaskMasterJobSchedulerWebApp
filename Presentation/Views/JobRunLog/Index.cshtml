@@ -1,0 +1,59 @@
+﻿@model IEnumerable<Core.Entities.JobRunLog>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.JobRunId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StartDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EndDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StatusId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Server)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JobSchedule_JobId)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.JobRunId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StartDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EndDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StatusId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Server)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.JobSchedule_JobId)
+                </td>
+
+            </tr>
+        }
+    </tbody>
+</table>

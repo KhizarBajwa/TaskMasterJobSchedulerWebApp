@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.34928.147
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Presentation", "Presentation\Presentation.csproj", "{7BDD10EB-9E6F-426C-A88F-0B1F5BF2E309}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{39B176A1-15C1-4039-B7F4-CFA0768A1599}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Application\Application.csproj", "{77A461F2-5543-4B5F-B328-F33004F5977A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{0169D958-E89F-495F-AAF7-3DDD8C5981D6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{90D6F7DB-960E-47A8-84DA-4C05351016E6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ProjectDiagrams", "ProjectDiagrams", "{E169D644-8113-4FA6-AFF7-795F5F95C851}"
+	ProjectSection(SolutionItems) = preProject
+		2. Sequence Diagram.txt = 2. Sequence Diagram.txt
+		3. Activity Diagram.txt = 3. Activity Diagram.txt
+		4. Class Diagram.txt = 4. Class Diagram.txt
+		Architecture Flow Diagram.txt = Architecture Flow Diagram.txt
+		1. Use Case Diagram.txt = 1. Use Case Diagram.txt
+		HelpCommand.txt = HelpCommand.txt
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7BDD10EB-9E6F-426C-A88F-0B1F5BF2E309}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BDD10EB-9E6F-426C-A88F-0B1F5BF2E309}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BDD10EB-9E6F-426C-A88F-0B1F5BF2E309}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BDD10EB-9E6F-426C-A88F-0B1F5BF2E309}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39B176A1-15C1-4039-B7F4-CFA0768A1599}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39B176A1-15C1-4039-B7F4-CFA0768A1599}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39B176A1-15C1-4039-B7F4-CFA0768A1599}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39B176A1-15C1-4039-B7F4-CFA0768A1599}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77A461F2-5543-4B5F-B328-F33004F5977A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77A461F2-5543-4B5F-B328-F33004F5977A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77A461F2-5543-4B5F-B328-F33004F5977A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77A461F2-5543-4B5F-B328-F33004F5977A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0169D958-E89F-495F-AAF7-3DDD8C5981D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0169D958-E89F-495F-AAF7-3DDD8C5981D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0169D958-E89F-495F-AAF7-3DDD8C5981D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0169D958-E89F-495F-AAF7-3DDD8C5981D6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E169D644-8113-4FA6-AFF7-795F5F95C851} = {90D6F7DB-960E-47A8-84DA-4C05351016E6}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A8D0E058-DD51-4358-A9C6-6A769C7FF85A}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,15 @@
+									 A sequence diagram shows how objects interact in a particular scenario of a use case.
+
+
+														User         Controller        UseCase        Repository
+														 |               |                |                |
+														 |   Create Job  |                |                |
+														 |-------------->|                |                |
+														 |               |   Execute      |                |
+														 |               |--------------->|                |
+														 |               |                |   Add Job      |
+														 |               |                |--------------->|
+														 |               |                |                |
+														 |               |                |<---------------|
+														 |               |<---------------|                |
+														 |<--------------|                |                |
